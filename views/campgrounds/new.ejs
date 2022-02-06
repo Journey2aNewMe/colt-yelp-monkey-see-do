@@ -2,19 +2,28 @@
 
 <h1 class="text-center">New Campground</h1>
 <div class="col-6 offset-3">
-    <form action="/campgrounds" method="POST">
+    <form action="/campgrounds" method="POST" novalidate class="needs-validation"> 
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
-            <input class="form-control" type="text" id="title" name="campground[title]">
+            <input class="form-control" type="text" id="title" name="campground[title]" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
         <div class="mb-3">
             <label for="location" class="form-label">Location</label>
-            <input type="text" id="location" name="campground[location]" class="form-control">
+            <input type="text" id="location" name="campground[location]" class="form-control" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
         <div class="mb-3">
             <label for="image" class="form-label">Image Url</label>
-            <input type="text" id="image" name="campground[image]" class="form-control">
+            <input type="text" id="image" name="campground[image]" class="form-control" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
         <div class="mb-3">
@@ -22,14 +31,18 @@
             <div class="input-group">
                 <span class="input-group-text" id="price-label">$</span>
                 <input type="text" class="form-control" placeholder="0.00" aria-label="Price" 
-                aria-describedby="price-label" name="campground[price]">
+                aria-describedby="price-label" name="campground[price]" required>
               </div>
+              
         </div>
 
 
         <div class="mb-3">
             <label for="description" class="form-label">Description</label>
-            <textarea type="text" id="description" name="campground[description]" class="form-control"></textarea>
+            <textarea type="text" id="description" name="campground[description]" class="form-control" required></textarea>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
         </div>
 
 
@@ -39,3 +52,4 @@
     </form>
     <a href="/campgrounds">All Campgrounds</a>   
 </div>
+
